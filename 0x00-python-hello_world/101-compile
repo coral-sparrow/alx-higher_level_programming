@@ -1,0 +1,5 @@
+#!/bin/bash
+python3 -m py_compile $PYFILE
+cd './__pycache__/'
+var=`echo $PYFILE | cut -d "." -f 1`
+mv "$var.cpython-39.pyc" "$var.pyc"
