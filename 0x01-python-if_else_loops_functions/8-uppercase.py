@@ -7,4 +7,4 @@ def uppercase(str):
             my_str += i
         else:
             my_str += chr(ord(i) - 32)
-    print(my_str)
+    print('{}'.format(my_str))
