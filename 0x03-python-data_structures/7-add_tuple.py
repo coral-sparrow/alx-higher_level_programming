@@ -13,4 +13,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
     if len(t_b) > 2:
         t_b[:2]
 
-    return ([x + y for x, y in in zip(t_a, t_p)])
+    return tuple([x + y for x, y in zip(t_a, t_b)])
