@@ -15,3 +15,5 @@ def search_replace(my_list, search, replace):
         else:
             t += my_list[i:]
             return t
+    else:
+        return None
