@@ -14,10 +14,16 @@ class Square:
 
     @property
     def size(self):
+        '''
+        this is consturctor
+        '''
         return self.__size
 
     @size.setter
     def size(self, size):
+        '''
+        this is consturctor
+        '''
         if isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
