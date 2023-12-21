@@ -6,6 +6,6 @@ def safe_function(fct, *args):
     """Define a class functions."""
     try:
         return fct(*args)
-    except:
-        print(f"Exception: {sys.exc_info()[1]}", file=sys.stderr)
+    except Exception as e:
+        print(f"Exception: {e}", file=sys.stderr)
         return None
