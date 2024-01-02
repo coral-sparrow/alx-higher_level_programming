@@ -1,0 +1,19 @@
+from ../0-add_integer import add_integer
+import unittest
+
+''' unittest for add_integer function '''
+
+
+class TestAddInterger(unittest.TestCase):
+    def test_type(self):
+        # test if it raises the error in case of wrong input type.
+        self.assertRaises(ValueError, add_integer, 3, 's')
+        self.assertRaises(ValueError, add_integer, 's', 3)
+        self.assertRaises(ValueError, add_integer, 's', 'm')
+
+    def test_result(self):
+        # test if the returned value is as expected
+        self.assertEqual(add_integer(3, 5.1), 8, "3 + 5.1 = 8")
+        self.assertEqual(add_integer(3.9, 5), 8, "3.9 + 5 = 8" )
+        self.assertEqual(add_integer(3.0, 5.0), 8, "3.0 + 5.0 = 8")
+        self.assertEqual(add_integer(3, 5), 8, "3 + 5 = 8")
