@@ -97,4 +97,6 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         ''' alternative contructor to create sqare'''
+        if not isinstance(size, int):
+            raise TypeError("size must be integer")
         return cls.__init__(width=size, height=size)
