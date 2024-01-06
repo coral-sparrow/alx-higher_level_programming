@@ -65,3 +65,7 @@ class Rectangle:
                 st += '#' * self.width + '\n'
         return st
 
+    def __repr__(self) -> str:
+        '''return the recangle string representation'''
+
+        return f'Rectangle({self.width}, {self.height})'
