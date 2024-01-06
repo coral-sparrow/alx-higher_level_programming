@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-""" LockedClass to control attributes creation """
+"""Defines a locked class."""
 
 
 class LockedClass:
-    """ The LockedClass """
+    """
+    Prevent the user from instantiating new LockedClass attributes
+    for anything but attributes called 'first_name'.
+    """
     def __setattr__(self, name: str, value: Any) -> None:
         """ setattr Dunder method """
         if name != 'first_name':
