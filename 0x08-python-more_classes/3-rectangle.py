@@ -54,5 +54,9 @@ class Rectangle:
         '''return the recangle representation in # '''
         st = ''
         for i in range(self.height):
-            st += '#' * self.width + '\n'
+            if i == self.height - 1:
+
+                st += '#' * self.width
+            else:
+                st += '#' * self.width + '\n'
         return st
