@@ -99,4 +99,4 @@ class Rectangle:
         ''' alternative contructor to create sqare'''
         if not isinstance(size, int):
             raise TypeError("size must be integer")
-        return cls.__init__(width=size, height=size)
+        return cls(width=size, height=size)
