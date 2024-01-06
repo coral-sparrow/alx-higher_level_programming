@@ -64,9 +64,9 @@ class Rectangle:
         for i in range(self.height):
             if i == self.height - 1:
 
-                st += Rectangle.print_symbol * self.width
+                st += f'{Rectangle.print_symbol}' * self.width
             else:
-                st += Rectangle.print_symbol * self.width + '\n'
+                st += f'{Rectangle.print_symbol}' * self.width + '\n'
         return st
 
     def __repr__(self) -> str:
