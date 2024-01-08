@@ -1,0 +1,11 @@
+from ../say_my_name import print_square
+import unittest
+
+
+class TestSayMyName(unittest.TestCase):
+    '''test say_my_name function'''
+
+    #test input types
+    def test_input_types(self):
+        self.assertRaises(TypeError, say_my_name, 3, 5)
+
