@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from base import Base
 """Define a class Rectangle."""
 
 
@@ -16,7 +17,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''width getter'''
+        '''width getter/seter function'''
         return self.__width
 
     @width.setter
@@ -25,7 +26,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        '''height getter'''
+        '''height getter/setter function'''
         return self.__height
 
     @height.setter
@@ -34,7 +35,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        '''x getter'''
+        '''x getter/setter function'''
         return self.__x
 
     @x.setter
@@ -43,7 +44,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        '''y getter'''
+        '''y getter/setter function'''
         return self.__y
 
     @y.setter
