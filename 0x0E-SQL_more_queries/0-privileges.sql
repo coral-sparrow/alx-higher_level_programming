@@ -1,4 +1,5 @@
 -- show grants for specific users
+-- show grants for these 2 users
 SHOW GRANTS FOR user_0d_1;
 SHOW GRANTS FOR user_0d_2;
 
