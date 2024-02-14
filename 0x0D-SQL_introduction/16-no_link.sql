@@ -1,5 +1,5 @@
 -- list based on condition
 SELECT score, name
 FROM second_table
-WHERE name != NULL
+WHERE name IS NOT  NULL
 ORDER BY score  DESC;
