@@ -1,3 +1,3 @@
 -- show grants for specific users
-SHOW GRANTS FOR admin;
-SHOW GRANTS FOR root;
+SHOW GRANTS FOR user_0d_1;
+SHOW GRANTS FOR user_0d_2;
