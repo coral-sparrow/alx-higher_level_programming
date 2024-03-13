@@ -24,7 +24,7 @@ class Rectangle {
     this.height = tmp;
   }
 
-  double () {
+  duple () {
     this.widht *= 2;
     this.height *= 2;
   }
