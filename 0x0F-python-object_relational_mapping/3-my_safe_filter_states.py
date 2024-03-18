@@ -21,7 +21,7 @@ def connectToDB() -> None:
         host=host
         )
 
-    safe_name = MySQLdb.connection.escape_string(unsafe_name)
+    safe_name = con.escape_string(unsafe_name)
     cur = con.cursor()
     cur.execute(
         '''
@@ -33,6 +33,8 @@ def connectToDB() -> None:
 
     for i in cur.fetchall():
         print(i)
+    
+    con.close()
 
 
 if __name__ == "__main__":

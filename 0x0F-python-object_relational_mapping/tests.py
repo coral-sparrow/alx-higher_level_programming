@@ -18,14 +18,19 @@ con = MySQLdb.connect(
     host = host
     )
 
+safe_name = con.escape_string(name)
+print(safe_name)
 cur = con.cursor()
 cur.execute(
     '''
     select * from second_table
     where binary Name like '{}' 
     order by  score desc
-    '''.format(name)
+    '''.format(safe_name)
     )
+
+
+
 
 for i in cur.fetchall():
     print(i)
