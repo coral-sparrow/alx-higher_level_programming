@@ -5,9 +5,9 @@ import MySQLdb
 # import os
 import sys
 
-uname = sys.argv[1]
-password = sys.argv[2]
-db = sys.argv[3]
+uname = 'root'
+password = 'root'
+db = 'alx_db'
 host = "192.168.1.4"
 
 con = MySQLdb.connect(
@@ -21,6 +21,7 @@ cur = con.cursor()
 cur.execute(
     '''
     select * from second_table
+    where Name like 'A%'
     order by  score desc
     '''
     )
