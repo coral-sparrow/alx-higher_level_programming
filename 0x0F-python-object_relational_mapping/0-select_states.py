@@ -24,7 +24,7 @@ def connectToDB() -> None:
     cur.execute(
         '''
         select * from states
-        order by  id desc
+        order by  id asc
         '''
         )
 
