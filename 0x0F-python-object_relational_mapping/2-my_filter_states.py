@@ -25,7 +25,7 @@ def connectToDB() -> None:
     cur.execute(
         '''
         select * from states
-        where binary name like {}
+        where name like {}
         order by  id asc
         '''.format(name)
         )
