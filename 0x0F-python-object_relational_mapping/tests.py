@@ -21,7 +21,7 @@ cur = con.cursor()
 cur.execute(
     '''
     select * from second_table
-    where Name like 'A%'
+    where binary Name like 'A%' 
     order by  score desc
     '''
     )
