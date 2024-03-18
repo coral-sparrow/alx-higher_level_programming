@@ -24,6 +24,7 @@ def connectToDB() -> None:
     cur.execute(
         '''
         select * from cities
+        group by state
         order by  id asc
         '''
         )
