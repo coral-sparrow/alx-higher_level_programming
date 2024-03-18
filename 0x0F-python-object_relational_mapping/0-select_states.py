@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+'''this is mysql db with python operations'''
+
 import MySQLdb
 import sys
 
