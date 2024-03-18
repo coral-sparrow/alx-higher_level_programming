@@ -26,8 +26,9 @@ def connectToDB() -> None:
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name = '{}' """.format(state))
 
-    for i in cur.fetchall():
-        print(i)
+    rows = cur.fetchall()
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
 
     cur.close()
     con.close()
