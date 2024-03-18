@@ -10,17 +10,17 @@ db = sys.argv[3]
 host = "localhost"
 
 con = MySQLdb.connect(
-    user = uname,
-    password = password,
-    database = db,
-    host = host
+    user=uname,
+    password=password,
+    database=db,
+    host=host
     )
 
 cur = con.cursor()
 cur.execute(
     '''
-    select * from second_table
-    order by  score desc
+    select * from states
+    order by  id desc
     '''
     )
 
