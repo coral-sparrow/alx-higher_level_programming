@@ -21,19 +21,20 @@ def connectToDB() -> None:
         host=host
         )
 
-    safe_name = con.escape_string(unsafe_name)
     cur = con.cursor()
     cur.execute(
         '''
         select * from states
-        where binary name like '{}'
+        where binary name like %s
         order by  id asc
-        '''.format(safe_name)
+        ''',
+        (unsafe_name,)
         )
 
     for i in cur.fetchall():
         print(i)
     
+    cur.close()
     con.close()
 
 
