@@ -33,7 +33,7 @@ def connectToDB() -> None:
 
     for i in cur.fetchall():
         print(i)
-    
+
     cur.close()
     con.close()
 
