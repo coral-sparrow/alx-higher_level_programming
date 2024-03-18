@@ -21,12 +21,8 @@ def connectToDB() -> None:
         )
 
     cur = con.cursor()
-    cur.execute(
-        '''
-        select * from cities
-        order by  id asc
-        '''
-        )
+    cur.execute("""SELECT cities.id, cities.name, states.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id""")
 
     for i in cur.fetchall():
         print(i)
