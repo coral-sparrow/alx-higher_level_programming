@@ -17,7 +17,7 @@ def connectToDB():
     db = sys.argv[3]
     host = "localhost"
 
-    engine = create_engine(f'mysql+pymysql://{uname}:{password}@{host}/{db}')
+    engine = create_engine(f'mysql+pymysql://{uname}:{password}@{host}:3306/{db}')
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
 
