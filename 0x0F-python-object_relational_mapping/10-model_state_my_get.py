@@ -13,10 +13,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).order_by(State.id).filter(
-        State.name == sys.argv[4]).first()
-
-    if instance is not None:
-        print('Not found')
-    else:
-        print(instance.id, instance.name, sep=": ")
+    instance = session.query(State).filter(State.name == (sys.argv[4],))
+    try:
+        print(instance[0].id)
+    except IndexError:
+        print("Not found")
