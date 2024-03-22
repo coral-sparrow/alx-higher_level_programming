@@ -19,8 +19,9 @@ def connectToDB():
 
     engine = create_engine(f'mysql+pymysql://{uname}:{password}@{host}/{db}')
 
-    session = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
 
+    session = Session()
     for instance in session.query(State).order_by(State.id):
         print(f'{instance.id}: {instance.name}')
 
